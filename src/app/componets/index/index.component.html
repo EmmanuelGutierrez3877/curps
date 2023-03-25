@@ -1,0 +1,64 @@
+<header>
+    <div class="col-2" style="margin-left: 10%;">
+        <img src="./../../../assets/logo_jaliscosedefiende_small.0c5859dd.svg" alt="">
+    </div>
+    <div class="col-2">
+        <img src="./../../../assets/logo_jal_small.caf4e29b.svg" alt="">
+    </div>
+    <div class="col-2 align-self-center">
+        calculadora
+    </div>
+    <div class="col-2 align-self-center">
+        Aviso de privacidad
+    </div>
+</header>
+
+<body>
+    <div class="div-info">
+        <div class="div-50">
+            <h4 class="azul-rey" style="margin-bottom: 5%; margin-top: 5%;">
+                <b>Campañas activas de vacunacion<br>contra Covid-19(ZMG)</b>
+            </h4>
+            <div class="flex">
+                <div class="flecha"><</div>
+                <div *ngFor="let campana of this.campanas" class="div-campaña">
+                    <img src="./../../../assets/personas.png" alt="">
+                    <br>
+                    <b class="azul-rey">{{campana.nombre}}</b>
+                    <br>
+                    <b class="azul-cielo">{{campana.dosis}}</b>
+                    <br>
+                    <b class="naranja">{{campana.vacuna}}</b>
+                    <br>
+                    <p class="naranja">{{campana.detalles}}</p>
+                </div>
+                <div class="flecha">></div>
+            </div>
+            
+        </div>
+        
+        <div class="div-50">
+            <h4 class="azul-cielo"><b>Comenzar ahora</b></h4>
+            <h6>Ingresa tu Curp para agendar una cita o para <a href="">cancelar una cita</a> ya registrada.</h6>
+            <div class="flex">
+                <input class="form-control w-50" placeholder="Introduce tu CURP" [(ngModel)]="curp">
+                <button class="btn btn-primary" (click)="guardar()">Continuar</button>
+            </div>
+            
+            <br>
+            Si no conoces tu CURP <a href="/">consulta aqui</a>.
+        </div>
+    </div>
+</body>
+
+<footer>
+    <div style="text-align: center; margin: 15px;">
+        <img src="./../../../assets/logo_red.7f6fffc3.svg" alt="">
+        <img src="./../../../assets/logo_prevenir.d402eae2.svg" alt="">
+        <img src="./../../../assets/salud.png" alt="">
+        <img src="./../../../assets/servicios de salud.png" alt="">
+        <img src="./../../../assets/sistema de atencion medica.png" alt="">
+        <img src="./../../../assets/logo_mexico_sedena.ffdf426e.png" alt="">
+        <img src="./../../../assets/logo_bienestar.be8b206e.png" alt="">
+    </div>
+</footer>
